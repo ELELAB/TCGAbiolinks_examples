@@ -6,6 +6,7 @@ Analyses of cancer data in the Genomic Data Commons Data Portal with new functio
 
 Mohamed Mounir, Tiago C. Silva, Marta Lucchetta, Catharina Olsen, Gianluca Bontempi, Houtan Noushmehr, Antonio Colaprico*, Elena Papaleo*
 
+submitted for publication
 
 corresponding author: Elena Papaleo, elenap@cancer.dk, Antonio Colaprico, , axc1833@med.miami.edu 
 
@@ -25,7 +26,13 @@ BIOCONDUCTOR:
 
 TCGAbiolinks
 SummarizedExperiment
+limma
+biomaRt
+recount
+TCGAutils
 
+CRAN
+plyr
 
 NOTES:
 
