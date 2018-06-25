@@ -30,6 +30,14 @@ convert.ENSG.Symbol<-function(genes){
 ucs.recount.gtex<-TCGAquery_recount2(project="GTEX", tissue="uterus")
 ucs.recount.tcga<-TCGAquery_recount2(project="TCGA", tissue="uterus")
 
+#to get the SE object
+SE.ucs.recount.gtex <- ucs.recount.gtex$GTEX_uterus
+SE.ucs.recount.tcga <- ucs.recount.tcga$TCGA_uterus
+
+# to get the read-count matrix only
+#matrix <- assays(SE.ucs.recount.gtex)$counts
+
+
 #### The steps below are needed to have the right correspondance beetween barcodes (TCGA) and UUID (recount)
 
 
@@ -69,7 +77,7 @@ rownames(eset.tcga) <- gsub("\\..*", "", rownames(eset.tcga))
 
 ####Segregate between primary tumors and normal samples
 eset.tcga.cancer<-eset.tcga[,which(colData(ucs.recount.tcga$TCGA_uterus)$gdc_cases.samples.sample_type=="Primary Tumor")]
-eset.tcga.nornal<-eset.tcga[,which(colData(ucs.recount.tcga$TCGA_uterus)$gdc_cases.samples.sample_type=="Solid Tissue Normal")]
+eset.tcga.normal<-eset.tcga[,which(colData(ucs.recount.tcga$TCGA_uterus)$gdc_cases.samples.sample_type=="Solid Tissue Normal")]
 ####
 
 
