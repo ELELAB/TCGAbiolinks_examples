@@ -9,7 +9,7 @@ bioRxiv, 2018, doi.org/10.1101/350439
 
 corresponding author: Elena Papaleo, elenap@cancer.dk, Antonio Colaprico, , axc1833@med.miami.edu 
 
-This repository contains two scripts to run the two case study presented in the manuscript, which have the purposes to serve as examples for the new functionalities implemented in TCGAbiolinks
+This repository contains the scripts to run the three cases study presented in the manuscript, which have the purposes to serve as examples for the new functionalities implemented in TCGAbiolinks
 
 
 Requirements:
@@ -32,7 +32,8 @@ TCGAutils
 
 CRAN
 plyr
-
+UpSetR
+ggplot2
 NOTES:
 
 We suggest to use Rstudio to run the scripts of interest so that you can follow the analyses one line at the time and digest the results.
