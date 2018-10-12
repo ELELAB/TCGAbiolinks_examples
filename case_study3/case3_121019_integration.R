@@ -1,4 +1,4 @@
-##setwd("~/test_ele3/")
+##setwd("~/ele_test3/")
 library(TCGAbiolinks)
 library(plyr)
 library(SummarizedExperiment)
@@ -22,11 +22,11 @@ queryDown <- GDCquery(project = "TCGA-LUAD",
                       data.category = "Transcriptome Profiling",
                       data.type = "Gene Expression Quantification", 
                       workflow.type = "HTSeq - Counts", 
-                      barcode = c(dataSmTP, dataSmNT))
+                      barcode = c(dataSmTP))
 
 GDCdownload(query = queryDown)
 
-dataPrep1 <- GDCprepare(query = queryDown, save = TRUE)
+dataPrep1 <- GDCprepare(query = queryDown)
 
 #pre-processing steps for the TCGA data (not needed for GEO in this
 #specific case of study since they have been already carried out by the authors of the GEO dataset
@@ -43,7 +43,8 @@ dataFilt <- TCGAanalyze_Filtering(tabDF = dataNorm,
                                   qnt.cut =  0.25)
 #if you want to reproduce exactly this case of study we reccomand to start from here loading the dataFilt_LUAD.rda
 #object that we provide in the example folder
-save(dataFilt, file = "dataFilt_LUAD.rda")
+
+save(dataFilt, file = "dataFilt_LUAD_tp.rda")
 
 # retrieve only tumor samples
 sampleTP <- TCGAquery_SampleTypes(barcode = colnames(dataFilt), typesample = "TP")
@@ -105,6 +106,8 @@ my.group <- rep(NA,ncol(countsTable))
 my.group[which(colnames(countsTable) %in% TCGAquery_SampleTypes(barcode = colnames(countsTable), typesample = "TP"))] <- "TCGA.tumor"
 my.group[which(is.na(my.group)==TRUE)] <- "GEO.tumor"
 pca$group <- as.factor(my.group)
+
+library (ggplot2)
 
 pdf("pca_GEO_TCGA_log.pdf")
 p<-ggplot(pca,aes(x=PC1,y=PC2,color=group ))
