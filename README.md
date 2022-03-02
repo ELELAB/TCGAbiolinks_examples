@@ -5,7 +5,7 @@ Repository associated to the publication:
 Analyses of cancer data in the Genomic Data Commons Data Portal with new functionalities in the TCGAbiolinks R/Bioconductor package
 
 Mohamed Mounir, Tiago C. Silva, Marta Lucchetta, Catharina Olsen, Gianluca Bontempi, Houtan Noushmehr, Antonio Colaprico*, Elena Papaleo*
-bioRxiv, 2018, doi.org/10.1101/350439
+PLoS Comput Biol. 2019 Mar 5;15(3):e1006701. doi: 10.1371/journal.pcbi.1006701
 
 corresponding author: Elena Papaleo, elenap@cancer.dk, Antonio Colaprico, , axc1833@med.miami.edu 
 
