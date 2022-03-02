@@ -2,9 +2,8 @@ Computational Biology Laboratory, Danish Cancer Society Research Center, Strandb
 
 Repository associated to the publication:
 
-Analyses of cancer data in the Genomic Data Commons Data Portal with new functionalities in the TCGAbiolinks R/Bioconductor package
-
-Mohamed Mounir, Tiago C. Silva, Marta Lucchetta, Catharina Olsen, Gianluca Bontempi, Houtan Noushmehr, Antonio Colaprico*, Elena Papaleo*
+New functionalities in the TCGAbiolinks package for the study and integration of cancer data from GDC and GTEx
+Mohamed Mounir, Marta Lucchetta, Tiago C Silva, Catharina Olsen, Gianluca Bontempi, Xi Chen, Houtan Noushmehr, Antonio Colaprico, Elena Papaleo*
 PLoS Comput Biol. 2019 Mar 5;15(3):e1006701. doi: 10.1371/journal.pcbi.1006701
 
 corresponding author: Elena Papaleo, elenap@cancer.dk, Antonio Colaprico, , axc1833@med.miami.edu 
